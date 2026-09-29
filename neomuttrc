@@ -6,13 +6,26 @@ set from = "soham.chatterjee@tifr.res.in"
 set folder      =    "imaps://soham.chatterjee%40tifr.res.in@tifr.res.in:993/"
 set spoolfile   =    "+INBOX"
 set imap_user   =    "soham.chatterjee@tifr.res.in"
-set imap_pass   =    "`gpg -q --decrypt tifr.gpg`"
+set imap_pass   =    "`gpg -q --decrypt ~/.config/neomutt/tifr.gpg`"
 
 # Common  IMAP Folders
 set postponed   =   "+Drafts"
 set record      =   "+Sent"
 set trash       =   "+Trash"
 
+# Editor
+set editor="nvim"
+
 # SMTP Sending
 set smtp_url    =   "smtps://soham.chatterjee@tifr.res.in@tifr.res.in:25/"
-set smtp_pass   =    "`gpg -q --decrypt tifr.gpg`"
+set smtp_pass   =    "`gpg -q --decrypt ~/.config/neomutt/tifr.gpg`"
+
+# Basic behaviour
+set sort        =   threads
+set sort_aux    =   reverse-last-date-received
+set mark_old    =   no
+set mime_forward=   ask-yes
+set charset     =   "utf-8"
+# set pager       =   "bat --plain --paging=always -l email --theme='Nord'"
+set to_chars    =   " 󰆎"
+set index_format = "%zc %zs %zt  | %-35.35L   %?M? (%M) ?%-30.100s %> %?Y?%Y ? %(!%a %d %h %H:%M)  "
