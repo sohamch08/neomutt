@@ -30,3 +30,5 @@ set charset     =   "utf-8"
 # set pager       =   "bat --plain --paging=always -l email --theme='Nord'"
 set to_chars    =   " 󰆎"
 set index_format = "%zc %zs %zt  | %-35.35L   %?M? (%M) ?%-30.100s %> %?Y?%Y ? %(!%a %d %h %H:%M)  "
+
+source ~/.config/neomutt/binds.muttrc

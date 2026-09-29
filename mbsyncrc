@@ -1,0 +1,23 @@
+# Remote IMAP Account
+IMAPStore soham.chatterjee@tifr.res.in-remote
+Host tifr.res.in
+Port 993
+User soham.chatterjee@tifr.res.in
+PassCmd "pass tifr"
+TLSType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# Local Maildir store
+MaildirStore soham.chatterjee@tifr.res.in-local
+Subfolders Verbatim
+Path /home/soham/.mail/tifr/
+Inbox /home/soham/.mail/tifr/INBOX
+
+# Sync channel
+Channel soham.chatterjee@tifr.res.in
+Expunge Both
+Far :soham.chatterjee@tifr.res.in-remote:
+Near :soham.chatterjee@tifr.res.in-local:
+Patterns *
+Create Both
+SyncState *
