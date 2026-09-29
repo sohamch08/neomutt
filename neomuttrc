@@ -1,87 +1,86 @@
 # Identity
-set realname    =   "Soham Chatterjee"
-set from        =   "soham.chatterjee@tifr.res.in"
+set realname                       = "Soham Chatterjee"
+set from                           = "soham.chatterjee@tifr.res.in"
 
 # IMAP Inbox
-set folder      =   "~/.mail/tifr"
-set spoolfile   =   "+INBOX"
-set mbox_type   =   Maildir
-set imap_user   =   "soham.chatterjee@tifr.res.in"
-# set imap_pass   =   "`gpg -q --decrypt ~/.config/neomutt/tifr.gpg`"
+set folder                         = "~/.mail/tifr"
+set spoolfile                      = "+INBOX"
+set mbox_type                      = Maildir
+set imap_user                      = "soham.chatterjee@tifr.res.in"
+# set imap_pass                      = "`gpg -q --decrypt ~/.config/neomutt/tifr.gpg`"
 
 # Common  IMAP Folders
-set postponed   =   "+Drafts"
-set record      =   "+Sent"
-set trash       =   "+Trash"
+set postponed                      = "+Drafts"
+set record                         = "+Sent"
+set trash                          = "+Trash"
 mailboxes +INBOX +Sent +Trash +Drafts +Junk +Archives +Simons "+TCS RSP" +datanet
 
 # Editor
-set editor      =   "nvim"
+set editor                         = "nvim"
 
 # SMTP Sending
-set smtp_url    =   "smtps://soham.chatterjee@tifr.res.in@tifr.res.in:25/"
-# set smtp_pass   =   "`gpg -q --decrypt ~/.config/neomutt/tifr.gpg`"
-set sendmail    =   "msmtp -a soham.chatterjee@tifr.res.in"
+set smtp_url                       = "smtps://soham.chatterjee@tifr.res.in@tifr.res.in:25/"
+# set smtp_pass                      = "`gpg -q --decrypt ~/.config/neomutt/tifr.gpg`"
+set sendmail                       = "msmtp -a soham.chatterjee@tifr.res.in"
 
 # Basic behaviour
 set sort_re
-set use_threads = yes
-set sort = reverse-last-date-received
-set sort_aux = date-received
-set mark_old    =   no
-set mime_forward=   ask-yes
-set charset     =   "utf-8"
-set to_chars    =   " 󰆎"
-set index_format = "%zc %zs %zt  | %-35.35L   %?M? (%M) ?%-30.100s %> %?Y?%Y ? %(!%a %d %h %H:%M)  "
+set use_threads                    = yes
+set sort                           = reverse-last-date-received
+set sort_aux                       = date-received
+set mark_old                       = no
+set mime_forward                   = ask-yes
+set charset                        = "utf-8"
+set to_chars                       = " 󰆎"
+set index_format                   = "%zc %zs %zt  | %-35.35L   %?M? (%M) ?%-30.100s %> %?Y?%Y ? %(!%a %d %h %H:%M)  "
 
 # Sidebar
-set sidebar_visible = yes
+set sidebar_visible                = yes
 set sidebar_short_path
 set sidebar_folder_indent
-set sidebar_divider_char = ' │'
-set sidebar_indent_string = ' - '
+set sidebar_divider_char           = ' │'
+set sidebar_indent_string          = ' - '
 set sidebar_non_empty_mailbox_only = yes
-set sidebar_width = 25
-set sidebar_format = "%D%<F? [%F]>%* %N/%S"
+set sidebar_width                  = 25
+set sidebar_format                 = "%D%<F? [%F]>%* %N/%S"
 
 # Alias settings
-set alias_file  =   "~/.config/neomutt/aliases"
-set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
-set alias_sort      =   "alias"
+set alias_file                     = "~/.config/neomutt/aliases"
+set alias_format                   = "%3i %f%t %-15a %-56A | %C%> %Y"
+set alias_sort                     = "alias"
 
 # Header Cache
-set header_cache_backend = "lmdb"
-set header_cache = "$HOME/.cache/neomutt/headers"
-set message_cache_dir = "$HOME/.cache/neomutt/bodies"
-set certificate_file = "$HOME/.cache/neomutt/certificates"
+set header_cache_backend           = "lmdb"
+set header_cache                   = "$HOME/.cache/neomutt/headers"
+set message_cache_dir              = "$HOME/.cache/neomutt/bodies"
+set certificate_file               = "$HOME/.cache/neomutt/certificates"
 
 # Notmuch config
-set nm_config_file = "~/.config/neomutt/notmuch-config"
-set nm_default_url = "notmuch:///home/soham/.mail/tifr"
+set nm_config_file                 = "~/.config/neomutt/notmuch-config"
+set nm_default_url                 = "notmuch:///home/soham/.mail/tifr"
 
 # External files
 source ~/.config/neomutt/binds.muttrc
 source ~/.config/neomutt/colors.muttrc
 source ~/.config/neomutt/aliases
 
-
 # Advance config
-set edit_headers    =   yes
-set mail_check_stats=   yes
-set greeting        =   "Hi %n,"
-set ispell          =   "ispell"
-set indent_string = "> "
-set forward_quote = yes
-set status_format = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o> %<d? Del:%d>%<F? Flag:%F> %<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b> %<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
-set text_flowed     =   yes
+set edit_headers                   = yes
+set mail_check_stats               = yes
+set greeting                       = "Hi %n,"
+set ispell                         = "ispell"
+set indent_string                  = "> "
+set forward_quote                  = yes
+set status_format                  = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o> %<d? Del:%d>%<F? Flag:%F> %<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b> %<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
+set text_flowed                    = yes
 
 # Signature
-set signature       =   "~/.config/neomutt/signature"
-set sig_dashes      =   no
-set sig_on_top      =   yes
+set signature                      = "~/.config/neomutt/signature"
+set sig_dashes                     = no
+set sig_on_top                     = yes
 
-set mailcap_path    =   "~/.config/neomutt/mailcap"
+set mailcap_path                   = "~/.config/neomutt/mailcap"
 
 # Pager settings
-set pager_index_lines = 8
-set pager_context = 3
+set pager_index_lines              = 8
+set pager_context                  = 3
