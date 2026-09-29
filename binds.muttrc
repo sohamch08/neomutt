@@ -1,1 +1,2 @@
 macro index S "<shell-escape>mbsync -a<Enter>" "Sync all mail with mbsync"
+bind index,pager \Cf vfolder-from-query
