@@ -32,4 +32,11 @@ set charset     =   "utf-8"
 set to_chars    =   " 󰆎"
 set index_format = "%zc %zs %zt  | %-35.35L   %?M? (%M) ?%-30.100s %> %?Y?%Y ? %(!%a %d %h %H:%M)  "
 
+# Notmuch config
+set nm_default_url = "notmuch:///home/soham/.mail/tifr"
+set virtual_spool_file  =   yes
+named-mailboxes "Inbox"  "notmuch://?query=tag:inbox"
+named-mailboxes "Unread" "notmuch://?query=tag:unread"
+named-mailboxes "Sent"   "notmuch://?query=tag:sent"
+
 source ~/.config/neomutt/binds.muttrc
