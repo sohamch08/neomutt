@@ -40,19 +40,27 @@ set sidebar_divider_char = ' │'
 set sidebar_indent_string = ' - '
 set sidebar_non_empty_mailbox_only = yes
 set sidebar_width = 25
+set sidebar_format = "%D%<F? [%F]>%* %N/%S"
 
+# Alias settings
 set alias_file  =   "~/.config/neomutt/aliases"
+set alias_format = "%3i %f%t %-15a %-56A | %C%> %Y"
+set alias_sort      =   "alias"
+
+# Header Cache
+set header_cache_backend = "lmdb"
+set header_cache = "$HOME/.cache/neomutt/headers"
+set message_cache_dir = "$HOME/.cache/neomutt/bodies"
+set certificate_file = "$HOME/.cache/neomutt/certificates"
 
 # Notmuch config
 set nm_config_file = "~/.config/neomutt/notmuch-config"
 set nm_default_url = "notmuch:///home/soham/.mail/tifr"
-set virtual_spool_file  =   yes
-named-mailboxes "Inbox"  "notmuch://?query=tag:inbox"
-named-mailboxes "Unread" "notmuch://?query=tag:unread"
-named-mailboxes "Sent"   "notmuch://?query=tag:sent"
 
+# External files
 source ~/.config/neomutt/binds.muttrc
 source ~/.config/neomutt/colors.muttrc
+source ~/.config/neomutt/aliases
 
 
 # Advance config
