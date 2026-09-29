@@ -1,2 +1,5 @@
 macro index S "<shell-escape>mbsync -a && notmuch new<Enter>" "Sync all mail with mbsync and update index"
 bind index,pager \Cf vfolder-from-query
+
+# URL Extraction
+macro index,pager \cb "<pipe-message>urlview<Enter>" "Extract and open URLs"
