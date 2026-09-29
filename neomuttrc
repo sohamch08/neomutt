@@ -69,3 +69,6 @@ set text_flowed     =   yes
 set signature       =   "~/.config/neomutt/signature"
 set sig_dashes      =   no
 set sig_on_top      =   yes
+
+auto-view text/html
+alternative_order text/plain text/html
