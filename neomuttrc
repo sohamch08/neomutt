@@ -1,0 +1,18 @@
+# Identity
+set realname = "Soham Chatterjee"
+set from = "soham.chatterjee@tifr.res.in"
+
+# IMAP Inbox
+set folder      =    "imaps://soham.chatterjee%40tifr.res.in@tifr.res.in:993/"
+set spoolfile   =    "+INBOX"
+set imap_user   =    "soham.chatterjee@tifr.res.in"
+set imap_pass   =    "`gpg -q --decrypt tifr.gpg`"
+
+# Common  IMAP Folders
+set postponed   =   "+Drafts"
+set record      =   "+Sent"
+set trash       =   "+Trash"
+
+# SMTP Sending
+set smtp_url    =   "smtps://soham.chatterjee@tifr.res.in@tifr.res.in:25/"
+set smtp_pass   =    "`gpg -q --decrypt tifr.gpg`"
