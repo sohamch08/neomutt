@@ -1,4 +1,4 @@
-macro index S "<shell-escape>mbsync -a && notmuch new<Enter>" "Sync all mail with mbsync and update index"
+macro index S "<shell-escape>~/.config/neomutt/scripts/mailsync.sh<Enter>" "Sync all mail with mbsync and update index"
 bind index,pager \Cf vfolder-from-query
 
 # URL Extraction
