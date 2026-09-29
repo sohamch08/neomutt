@@ -37,3 +37,5 @@ set editor = "nvim"
 ## Sending Mails (MSMTP)
 
 ## Fast Searching Mails (Notmuch)
+
+## Mailsync Service
