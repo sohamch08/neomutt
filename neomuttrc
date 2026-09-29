@@ -24,8 +24,10 @@ set smtp_url    =   "smtps://soham.chatterjee@tifr.res.in@tifr.res.in:25/"
 set sendmail    =   "msmtp -a soham.chatterjee@tifr.res.in"
 
 # Basic behaviour
-set sort        =   threads
-set sort_aux    =   reverse-last-date-received
+set sort_re
+set use_threads = yes
+set sort = reverse-last-date-received
+set sort_aux = date-received
 set mark_old    =   no
 set mime_forward=   ask-yes
 set charset     =   "utf-8"
