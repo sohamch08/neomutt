@@ -5,7 +5,7 @@ Port 993
 User soham.chatterjee@tifr.res.in
 PassCmd "pass tifr"
 TLSType IMAPS
-CertificateFile /etc/ssl/certs/ca-certificates.crt
+SystemCertificates yes
 
 # Local Maildir store
 MaildirStore soham.chatterjee@tifr.res.in-local
