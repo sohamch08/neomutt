@@ -1,0 +1,16 @@
+[database]
+path=/home/soham/.mail/tifr
+
+[user]
+name=Soham Chatterjee
+primary_email=soham.chatterjee@tifr.res.in
+
+[new]
+tags=unread;inbox;
+
+[search]
+
+exclude_tags=deleted;spam;trash
+
+[maildir]
+synchronize_flags=true
