@@ -1,0 +1,17 @@
+# Default settings applied to all accounts
+defaults
+auth                on
+tls                 on
+tls_trust_file      /etc/ssl/certs/ca-certificates.crt
+logfile             ~/.config/logs/msmtp.log
+
+
+# Account definition
+account             $TIFR_USER_NAME@tifr.res.in
+host                158.144.1.22
+port                25
+tls_host_override   tifr.res.in
+tls_starttls   on
+from           $TIFR_USER_NAME@tifr.res.in
+user           $TIFR_USER_NAME@tifr.res.in
+passwordeval   "pass tifr"
