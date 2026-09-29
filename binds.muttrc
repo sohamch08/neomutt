@@ -1,5 +1,20 @@
+bind index j next-entry
+bind index k previous-entry
+bind pager j next-line
+bind pager k previous-line
+bind index l display-message   
+bind pager h exit
+bind pager g top
+bind pager G bottom
+bind index,pager R group-reply
+bind index,pager a create-alias
+
 macro index S "<shell-escape>~/.config/neomutt/scripts/mailsync.sh<Enter>" "Sync all mail with mbsync and update index"
 bind index,pager \Cf vfolder-from-query
 
 # URL Extraction
 macro index,pager \cb "<pipe-message>urlview<Enter>" "Extract and open URLs"
+
+bind index,pager B sidebar-toggle-visible
+macro index,pager \Cj "<sidebar-next><sidebar-open>" "Next mailbox and open"
+macro index,pager \Ck "<sidebar-prev><sidebar-open>" "Previous mailbox and open"
