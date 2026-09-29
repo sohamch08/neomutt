@@ -5,7 +5,7 @@ Port 993
 User $TIFR_USER_NAME@tifr.res.in
 PassCmd "pass tifr"
 TLSType IMAPS
-CertificateFile /etc/ssl/certs/ca-certificates.crt
+SystemCertificates yes
 
 # Local Maildir store
 MaildirStore $TIFR_USER_NAME@tifr.res.in-local

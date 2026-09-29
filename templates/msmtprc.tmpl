@@ -15,3 +15,6 @@ tls_starttls   on
 from           $TIFR_USER_NAME@tifr.res.in
 user           $TIFR_USER_NAME@tifr.res.in
 passwordeval   "pass tifr"
+
+# Default account
+account default : $TIFR_USER_NAME@tifr.res.in
