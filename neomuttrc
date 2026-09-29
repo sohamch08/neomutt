@@ -1,12 +1,13 @@
 # Identity
-set realname = "Soham Chatterjee"
-set from = "soham.chatterjee@tifr.res.in"
+set realname    =   "Soham Chatterjee"
+set from        =   "soham.chatterjee@tifr.res.in"
 
 # IMAP Inbox
-set folder      =    "imaps://soham.chatterjee%40tifr.res.in@tifr.res.in:993/"
-set spoolfile   =    "+INBOX"
-set imap_user   =    "soham.chatterjee@tifr.res.in"
-set imap_pass   =    "`gpg -q --decrypt ~/.config/neomutt/tifr.gpg`"
+set folder      =   "~/.mail/tifr"
+set spoolfile   =   "+INBOX"
+set mbox_type   =   Maildir
+set imap_user   =   "soham.chatterjee@tifr.res.in"
+set imap_pass   =   "`gpg -q --decrypt ~/.config/neomutt/tifr.gpg`"
 
 # Common  IMAP Folders
 set postponed   =   "+Drafts"
@@ -14,7 +15,7 @@ set record      =   "+Sent"
 set trash       =   "+Trash"
 
 # Editor
-set editor="nvim"
+set editor      =   "nvim"
 
 # SMTP Sending
 set smtp_url    =   "smtps://soham.chatterjee@tifr.res.in@tifr.res.in:25/"

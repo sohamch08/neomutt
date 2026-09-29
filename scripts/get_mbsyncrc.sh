@@ -33,5 +33,5 @@ export MAIL_PATH
 mkdir -p -- "$MAIL_PATH"
 echo "Created $MAIL_PATH"
 
-envsubst '$TIFR_USER_NAME $MAIL_PATH' <../mbsyncrc.tmpl >~/.mbsyncrc
+envsubst '$TIFR_USER_NAME $MAIL_PATH' <./mbsyncrc.tmpl >~/.mbsyncrc
 echo -e "Generated .mbsyncrc file at $HOME/.mbsyncrc"
