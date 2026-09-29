@@ -28,9 +28,19 @@ set sort_aux    =   reverse-last-date-received
 set mark_old    =   no
 set mime_forward=   ask-yes
 set charset     =   "utf-8"
-# set pager       =   "bat --plain --paging=always -l email --theme='Nord'"
 set to_chars    =   " 󰆎"
 set index_format = "%zc %zs %zt  | %-35.35L   %?M? (%M) ?%-30.100s %> %?Y?%Y ? %(!%a %d %h %H:%M)  "
+
+# Sidebar
+set sidebar_visible = yes # comment to disable sidebar by default
+set sidebar_short_path
+set sidebar_folder_indent
+set sidebar_divider_char = ' │'
+set sidebar_indent_string = ' - '
+set sidebar_non_empty_mailbox_only = yes
+set sidebar_width = 25
+
+set alias_file  =   "~/.config/neomutt/aliases"
 
 # Notmuch config
 set nm_default_url = "notmuch:///home/soham/.mail/tifr"
@@ -40,3 +50,4 @@ named-mailboxes "Unread" "notmuch://?query=tag:unread"
 named-mailboxes "Sent"   "notmuch://?query=tag:sent"
 
 source ~/.config/neomutt/binds.muttrc
+source ~/.config/neomutt/colors.muttrc
