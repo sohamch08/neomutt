@@ -1,14 +1,14 @@
 # External files
-source ~/.config/neomutt/binds.muttrc
-source ~/.config/neomutt/colors.muttrc
-source ~/.config/neomutt/aliases
+source ~/.config/neomutt/modules/binds.muttrc
+source ~/.config/neomutt/modules/colors.muttrc
+source ~/.config/neomutt/modules/aliases.muttrc
 
 # Identity
 set from                            = "soham.chatterjee@tifr.res.in"
 
 # Paths
 set folder                          = "~/.mail/tifr"
-set alias_file                      = "~/.config/neomutt/aliases"
+set alias_file                      = "~/.config/neomutt/modules/aliases.muttrc"
 set header_cache                    = "$HOME/.cache/neomutt/headers"
 set message_cache_dir               = "$HOME/.cache/neomutt/bodies"
 set certificate_file                = "$HOME/.cache/neomutt/certificates"

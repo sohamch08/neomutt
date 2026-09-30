@@ -1,0 +1,12 @@
+color normal     default      default
+color status     black        cyan
+color indicator  brightwhite  default
+color tree       red          default
+color attachment white        default
+color signature  brightred    default
+color body       brightblue   default "(https?|ftp)://[^ ]+"
+color body       brightyellow default "[a-z0-9._-]+@[a-z0-9._-]+"
+color index      brightgreen  default "~N"
+color index      red          default "~F"
+color header     cyan         default "^(From|Subject):"
+color sidebar_new color221 color233
