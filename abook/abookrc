@@ -1,0 +1,19 @@
+set autosave=true
+set sort_field=true
+
+view CONTACT = name, email
+view ADDRESS = email
+view OTHER = url
+
+set index_format ="{name:22} | {email:70}"
+# set some variables
+set autosave=true
+set preserve_fields=all
+set show_all_emails=true
+set mutt_command=neomutt
+set mutt_return_all_emails=true
+set print_command=lpr
+set www_command=lynx
+set use_ascii_only=false
+set add_email_prevent_duplicates=true
+set show_cursor=false
