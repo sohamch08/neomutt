@@ -121,3 +121,6 @@ set greeting                        = "Hi %n,"
 set ispell                          = "ispell"
 set include
 set sendmail_wait                   = 0
+
+# Address Book setup (Abook)
+set query_command                   = "abook --mutt-query %s"
