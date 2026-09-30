@@ -8,6 +8,12 @@ for file in modules/aliases.muttrc abook/addressbook; do
     echo "ERROR: Plaintext contacts are tracked: $file" >&2
     echo "Keep the local file but remove it from Git's index with:" >&2
     echo "  git rm --cached -- '$file'" >&2
+    echo "Then open '$PWD/.gitignore' in your editor." >&2
+    echo "If equivalent rules are not already present, add these lines at the end:" >&2
+    echo "  /$file" >&2
+    echo "  !/$file.gpg" >&2
+    echo "The first rule ignores plaintext; the second allows its encrypted backup." >&2
+    echo "Save .gitignore, run 'git add -- .gitignore', and retry the commit." >&2
     exit 1
   fi
 done
