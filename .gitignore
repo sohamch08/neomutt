@@ -1,7 +1,10 @@
 tifr.gpg
+
 abook/addressbook*
 abook/addressbook.*
 !abook/addressbook.gpg
 
 aliases.*
 !aliases.muttrc.gpg
+
+logs/
