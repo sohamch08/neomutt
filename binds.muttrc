@@ -1,20 +1,52 @@
+# Vim Bindings
 bind index j next-entry
 bind index k previous-entry
 bind pager j next-line
 bind pager k previous-line
-bind index l display-message   
+bind index l display-message
 bind pager h exit
-bind pager g top
+bind index g noop
+bind index gg first-entry
+bind index G last-entry
+bind pager g noop
+bind pager gg top
 bind pager G bottom
+
+
+
+
+
 bind index,pager R group-reply
 bind index,pager a create-alias
-
+bind compose p postpone-message
+bind index p recall-message
+# Sync mail
 macro index S "<shell-escape>~/.config/neomutt/scripts/mailsync.sh<Enter>" "Sync all mail with mbsync and update index"
+
+# Search mail
 bind index,pager \Cf vfolder-from-query
+bind index,pager N   search-opposite
+
+# Limit Search
+bind index gl limit
+macro index gu "<limit>all<enter>" "Show all messages (clear limit)"
 
 # URL Extraction
 macro index,pager \cb "<pipe-message>urlview<Enter>" "Extract and open URLs"
 
+# Toggling Sidebar
 bind index,pager B sidebar-toggle-visible
-macro index,pager \Cj "<sidebar-next><sidebar-open>" "Next mailbox and open"
-macro index,pager \Ck "<sidebar-prev><sidebar-open>" "Previous mailbox and open"
+
+# Mark all as read
+macro index A "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
+
+macro index,pager J "<sidebar-next><sidebar-open>" "Next mailbox and open"
+macro index,pager K "<sidebar-prev><sidebar-open>" "Previous mailbox and open"
+
+# Saner copy/move dialogs
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+# Collapse Thread
+bind index <space>  collapse-thread
+
