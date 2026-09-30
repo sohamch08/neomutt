@@ -4,4 +4,4 @@ abook/addressbook.*
 !abook/addressbook.gpg
 
 aliases.*
-!aliases.gpg
+!aliases.muttrc.gpg
