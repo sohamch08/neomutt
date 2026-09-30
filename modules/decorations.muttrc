@@ -1,0 +1,14 @@
+set to_chars                        = " 󰆎"
+set flag_chars                      = "ONon  "
+tag-transforms "replied" "↻ "  \
+               "encrytpted" "" \
+               "signed" "" \
+               "attachment" "" \
+
+# Status Bar
+set status_chars                    = " "
+set status_format                   = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+# set status_format                   = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o> %<d? Del:%d>%<F? Flag:%F> %<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b> %<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
+
+# Index Bar Mail Entries
+set index_format                    = "%zc %zs %zt  | %-35.35L   %?M? (%M) ?%-30.100s %> %?Y?%Y ? %(!%a %d %h %H:%M)  "

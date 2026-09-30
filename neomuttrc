@@ -1,5 +1,6 @@
 # External files
 source ~/.config/neomutt/modules/binds.muttrc
+source ~/.config/neomutt/modules/decorations.muttrc
 source ~/.config/neomutt/modules/colors.muttrc
 source ~/.config/neomutt/modules/aliases.muttrc
 
@@ -32,7 +33,6 @@ mailboxes +INBOX +Sent +Trash +Drafts +Junk +Archives +Simons "+TCS RSP" +datane
 set editor                          = "nvim -f"
 
 # SMTP Sending
-# set smtp_url                        = "smtps://soham.chatterjee@tifr.res.in@tifr.res.in:25/"
 set sendmail                        = "msmtp -a soham.chatterjee@tifr.res.in"
 
 # Basic behaviour
@@ -49,15 +49,7 @@ set sort                            = reverse-last-date-received
 set sort_aux                        = date-received
 set mark_old                        = no
 set charset                         = "utf-8"
-set to_chars                        = " 󰆎"
 
-# Status Bar
-set status_chars = " "
-set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
-# set status_format                   = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o> %<d? Del:%d>%<F? Flag:%F> %<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b> %<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
-
-# Index Bar Mail Entries
-set index_format                    = "%zc %zs %zt  | %-35.35L   %?M? (%M) ?%-30.100s %> %?Y?%Y ? %(!%a %d %h %H:%M)  "
 
 # Sidebar
 set sidebar_visible                 = yes

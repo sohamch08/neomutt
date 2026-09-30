@@ -13,13 +13,11 @@ bind pager gg top
 bind pager G bottom
 
 
-
-
-
 bind index,pager R group-reply
 bind index,pager a create-alias
 bind compose p postpone-message
 bind index p recall-message
+bind index,pager F flag-message
 # Sync mail
 macro index S "<shell-escape>~/.config/neomutt/scripts/mailsync.sh<Enter>" "Sync all mail with mbsync and update index"
 
