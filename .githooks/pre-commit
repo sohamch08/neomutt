@@ -18,6 +18,16 @@ for file in modules/aliases.muttrc abook/addressbook; do
   fi
 done
 
+# The separate database commit must not encrypt or unstage its own files.
+if [[ "${NEOMUTT_DATABASE_COMMIT:-0}" == 1 ]]; then
+  exit 0
+fi
+
+# Do not add new database commits while Git is replaying history.
+if [[ -d "$(git rev-parse --git-path rebase-merge)" || -d "$(git rev-parse --git-path rebase-apply)" ]]; then
+  exit 0
+fi
+
 if [[ ! -x ./scripts/contacts-gpg.sh ]]; then
   echo "ERROR: scripts/contacts-gpg.sh is missing or is not executable." >&2
   echo "Restore the script if missing, then run: chmod +x scripts/contacts-gpg.sh" >&2
@@ -30,4 +40,6 @@ if ! ./scripts/contacts-gpg.sh backup; then
   exit 1
 fi
 
-git add -- modules/aliases.muttrc.gpg abook/addressbook.gpg
+# Keep encrypted contacts out of the normal commit, even after git add -A.
+# This changes only their staged versions; the encrypted files stay on disk.
+git reset -q -- modules/aliases.muttrc.gpg abook/addressbook.gpg

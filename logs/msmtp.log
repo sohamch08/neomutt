@@ -1,0 +1,2 @@
+Sep 30 00:48:31 host=158.144.1.22 tls=on auth=on user=soham.chatterjee@tifr.res.in from=soham.chatterjee@tifr.res.in recipients=soham.chatterjee@tifr.res.in mailsize=135 smtpstatus=250 smtpmsg='250 2.0.0 Ok: queued as 4hvnGj5ZnDzGrw48' exitcode=EX_OK
+Sep 30 00:48:50 host=158.144.1.22 tls=on auth=on user=soham.chatterjee@tifr.res.in from=soham.chatterjee@tifr.res.in recipients=sohamchatterjee999@gmail.com mailsize=135 smtpstatus=250 smtpmsg='250 2.0.0 Ok: queued as 4hvnH52nxSzGrvTj' exitcode=EX_OK
