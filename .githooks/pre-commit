@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(git rev-parse --show-toplevel)"
+
+for file in modules/aliases.muttrc abook/addressbook; do
+  if git ls-files --error-unmatch -- "$file" >/dev/null 2>&1; then
+    echo "ERROR: Plaintext contacts are tracked: $file" >&2
+    echo "Keep the local file but remove it from Git's index with:" >&2
+    echo "  git rm --cached -- '$file'" >&2
+    exit 1
+  fi
+done
+
+if [[ ! -x ./scripts/contacts-gpg.sh ]]; then
+  echo "ERROR: scripts/contacts-gpg.sh is missing or is not executable." >&2
+  echo "Restore the script if missing, then run: chmod +x scripts/contacts-gpg.sh" >&2
+  exit 1
+fi
+
+if ! ./scripts/contacts-gpg.sh backup; then
+  echo "ERROR: Contact backup failed. Commit cancelled; encrypted backups were not staged by this hook." >&2
+  echo "Fix the error reported above and retry the commit." >&2
+  exit 1
+fi
+
+git add -- modules/aliases.muttrc.gpg abook/addressbook.gpg
