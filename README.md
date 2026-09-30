@@ -4,7 +4,6 @@
 
 ## Base Neomutt/Mutt config to Get Started
 
-
 ```muttrc
 # Identity
 set realname = "Soham Chatterjee"
@@ -31,7 +30,6 @@ set ssl_force_tls = yes
 set editor = "nvim"
 ```
 
-
 ## Setting Up Offline Email (Mbsync)
 
 ## Sending Mails (MSMTP)
@@ -39,3 +37,10 @@ set editor = "nvim"
 ## Fast Searching Mails (Notmuch)
 
 ## Mailsync Service
+
+## Benchmark Comparison
+
+![](assets/benchmark.svg)
+
+So lmdp is overall gives better performance
+
