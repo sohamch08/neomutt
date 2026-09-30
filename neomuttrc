@@ -70,7 +70,7 @@ set sidebar_width                   = 24
 set sidebar_format                  = "%D%<F? [%F]>%* %N/%S"
 
 # Alias settings
-set alias_format                    = "%3i %f%t %-15a %-56A | %C%> %Y"
+set alias_format                    = "%3i %f%t %-15a %-23N %E"
 set alias_sort                      = "alias"
 
 # Header options
