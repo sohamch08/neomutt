@@ -1,1 +1,53 @@
 text/html; lynx -dump %s; copiousoutput
+# PDF: Zathura, with optional text preview
+application/pdf; zathura %s; nametemplate=%s.pdf
+application/pdf; pdftotext -layout %s -; copiousoutput
+application/x-pdf; zathura %s; nametemplate=%s.pdf
+application/x-pdf; pdftotext -layout %s -; copiousoutput
+
+# DjVu: these must precede the image/* rule
+image/vnd.djvu; zathura %s; nametemplate=%s.djvu
+image/x-djvu; zathura %s; nametemplate=%s.djvu
+application/x-djvu; zathura %s; nametemplate=%s.djvu
+
+# PostScript
+application/postscript; zathura %s; nametemplate=%s.ps
+
+# All other image types: use desktop associations
+image/*; xdg-open %s; x-neomutt-keep
+
+# HTML: browser on demand, Lynx for terminal rendering
+text/html; xdg-open %s; nametemplate=%s.html; x-neomutt-keep
+text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
+
+# Microsoft Office documents
+application/msword; libreoffice --view %s; nametemplate=%s.doc; x-neomutt-keep
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice --view %s; nametemplate=%s.docx; x-neomutt-keep
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc -f docx -t plain %s; copiousoutput
+
+application/vnd.ms-excel; libreoffice --view %s; nametemplate=%s.xls; x-neomutt-keep
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice --view %s; nametemplate=%s.xlsx; x-neomutt-keep
+
+application/vnd.ms-powerpoint; libreoffice --view %s; nametemplate=%s.ppt; x-neomutt-keep
+application/vnd.openxmlformats-officedocument.presentationml.presentation; libreoffice --view %s; nametemplate=%s.pptx; x-neomutt-keep
+
+# OpenDocument files
+application/vnd.oasis.opendocument.text; libreoffice --view %s; nametemplate=%s.odt; x-neomutt-keep
+application/vnd.oasis.opendocument.text; pandoc -f odt -t plain %s; copiousoutput
+application/vnd.oasis.opendocument.spreadsheet; libreoffice --view %s; nametemplate=%s.ods; x-neomutt-keep
+application/vnd.oasis.opendocument.presentation; libreoffice --view %s; nametemplate=%s.odp; x-neomutt-keep
+
+# Archive contents, without extracting them
+application/zip; unzip -l %s; copiousoutput
+application/x-zip-compressed; unzip -l %s; copiousoutput
+application/x-tar; tar -tf %s; copiousoutput
+application/x-7z-compressed; 7z l %s; copiousoutput
+application/vnd.rar; unrar l %s; copiousoutput
+application/x-rar-compressed; unrar l %s; copiousoutput
+
+# Audio and video
+audio/*; mpv --no-video %s
+video/*; mpv %s
+
+# Structured text
+application/json; jq . %s; copiousoutput
