@@ -23,11 +23,13 @@ set imap_user                       = "soham.chatterjee@tifr.res.in"
 
 # Mail Directories
 set spoolfile                       = "+INBOX"
+mailboxes +INBOX
+virtual-mailboxes "Today's Email" "notmuch://?query=date:today"
 set postponed                       = "+Drafts"
 set record                          = "+Sent"
 set trash                           = "+Trash"
 set mbox                            = "+Archives"
-mailboxes +INBOX +Sent +Trash +Drafts +Junk +Archives +Simons "+TCS RSP" +datanet
+mailboxes +Sent +Trash +Drafts +Junk +Archives +Simons "+TCS RSP" +datanet
 
 # Editor
 set editor                          = "nvim -f"
@@ -60,6 +62,7 @@ set sidebar_indent_string           = ' - '
 set sidebar_non_empty_mailbox_only  = yes
 set sidebar_width                   = 24
 set sidebar_format                  = "%D%<F? [%F]>%* %N/%S"
+set sidebar_sort                    = unsorted
 
 # Alias settings
 set alias_format                    = "%3i %f%t %-15a %-23N %E"
@@ -87,6 +90,7 @@ set quote_regexp                    = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 set menu_scroll
 set tilde
 set move                            = no
+set crypt_use_gpgme                 = no
 
 # Pager settings
 set pager_index_lines               = 8

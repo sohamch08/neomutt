@@ -52,3 +52,4 @@ bind index <space>  collapse-thread
 bind editor <Tab> complete
 bind editor ^T complete-query
 macro index,pager ga "<pipe-message>abook --add-email-quiet<enter>" "Save sender to abook"
+macro generic,index,pager gc "<shell-escape>abook<return>" "launch abook"

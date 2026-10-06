@@ -1,6 +1,3 @@
-set autosave=true
-set sort_field=true
-
 view CONTACT = name, email
 view ADDRESS = email
 view OTHER = url
