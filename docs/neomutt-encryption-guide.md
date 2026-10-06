@@ -5,6 +5,10 @@ header-includes:
     \usepackage{xurl}
     \usepackage{seqsplit}
     \usepackage{fvextra}
+    \usepackage{needspace}
+    \AddToHook{cmd/section/before}{\Needspace{15\baselineskip}}
+    \AddToHook{cmd/subsection/before}{\Needspace{12\baselineskip}}
+    \AddToHook{cmd/subsubsection/before}{\Needspace{9\baselineskip}}
     \DeclareRobustCommand{\texttt}[1]{{\ttfamily\seqsplit{#1}}}
     \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines,breakanywhere,fontsize=\small}
     \RecustomVerbatimEnvironment{verbatim}{Verbatim}{breaklines,breakanywhere,fontsize=\small}
@@ -853,7 +857,7 @@ Removing old indexed plaintext/session keys is a separate operation involving re
 **Practical treatment:** Encrypt the backups and plan retention; deleting a live file is not proof that every historical copy vanished
 
 
-The cache, FCC, protected-header and draft behavior in this table is checked against the installed NeoMutt manual at `/usr/share/doc/neomutt/manual.txt`; online references are [NeoMutt configuration](https://neomutt.org/man/neomuttrc) and [general options](https://docs.neomutt.org/reference/config/general.html). The installed option query was performed with an empty configuration, without loading account passwords.
+The cache, FCC, protected-header and draft behavior in these entries is checked against the installed NeoMutt manual at `/usr/share/doc/neomutt/manual.txt`; online references are [NeoMutt configuration](https://neomutt.org/man/neomuttrc) and [general options](https://docs.neomutt.org/reference/config/general.html). The installed option query was performed with an empty configuration, without loading account passwords.
 
 `tmpfs` can reduce ordinary disk writes, but is not automatically a never-on-disk guarantee: its pages can be swapped unless configured otherwise, and hibernation/memory capture require separate consideration. Volatile storage also loses recovery drafts at reboot, so choose explicitly between crash recovery and short-lived plaintext. [Linux tmpfs documentation](https://www.kernel.org/doc/html/latest/filesystems/tmpfs.html)
 
@@ -953,7 +957,7 @@ The older Thunderbird article linked above is used only for this protocol-level 
 **What it establishes:** Confidentiality plus a check of the signed content and signing key
 
 
-The table describes conventional interoperable message formats, not every proprietary secure-mail portal or opaque S/MIME format. Cryptography cannot prevent an authorized recipient from copying, photographing, or forwarding the decrypted content. A signature authenticates a key; attributing that key to a human also requires a reliable identity check. [OpenPGP standard](https://www.rfc-editor.org/rfc/rfc9580.html)
+These entries describe conventional interoperable message formats, not every proprietary secure-mail portal or opaque S/MIME format. Cryptography cannot prevent an authorized recipient from copying, photographing, or forwarding the decrypted content. A signature authenticates a key; attributing that key to a human also requires a reliable identity check. [OpenPGP standard](https://www.rfc-editor.org/rfc/rfc9580.html)
 
 ### Which key performs which job?
 
@@ -1117,7 +1121,7 @@ The **mail service** and the **mail application** are different things. A Gmail 
 **Practical expectation and setup:** Apple documents certificate-based S/MIME. Import/configure the appropriate personal certificate and private key. Treat OpenPGP as a separate compatibility question, not as a built-in consequence of seeing a lock icon. iCloud web mail may not display encrypted messages. [Apple mail encryption overview](https://support.apple.com/guide/icloud/a-digitally-signed-encrypted-email-mm80823f0e2b/icloud), [Mac certificate setup](https://support.apple.com/en-ie/guide/mail/mlhlp1179/mac)
 
 
-This table is a compatibility guide, not a claim that every message was tested on all these clients. A harmless test message with one attachment is the best way to verify the exact versions, devices, and recipient setup before exchanging real private material.
+These descriptions are a compatibility guide, not a claim that every message was tested on all these clients. A harmless test message with one attachment is the best way to verify the exact versions, devices, and recipient setup before exchanging real private material.
 
 ## 11. MIME, attachments, and old inline PGP
 
