@@ -8,3 +8,5 @@ aliases.*
 !aliases.muttrc.gpg
 
 logs/
+.agents/
+.codex/
