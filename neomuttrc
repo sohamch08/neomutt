@@ -23,7 +23,7 @@ set imap_user                       = "soham.chatterjee@tifr.res.in"
 
 # Mail Directories
 set spoolfile                       = "+INBOX"
-mailboxes +INBOX
+mailboxes +INBOX +ACT_Global
 virtual-mailboxes "Today's Email" "notmuch://?query=date:today"
 set postponed                       = "+Drafts"
 set record                          = "+Sent"
