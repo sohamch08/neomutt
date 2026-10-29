@@ -1,3 +1,5 @@
+# vim: set filetype=muttrc :
+
 set to_chars                        = " 󰆎"
 set flag_chars                      = "ONon  "
 tag-transforms "replied" "↻ "  \
