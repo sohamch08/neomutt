@@ -1,79 +1,68 @@
 # vim: set filetype=muttrc :
 # Catppuccin Mocha for NeoMutt
-# Based on the Catppuccin NeoMutt light and dark theme mappings:
-# https://github.com/catppuccin/neomutt/blob/main/latte-neomuttrc
-# https://github.com/catppuccin/neomutt/blob/main/neomuttrc
 # Palette: https://catppuccin.com/palette/#mocha
-# Uses 256-color Mocha approximations, like the existing colors.muttrc.
+# Based on https://github.com/catppuccin/neomutt
+# Uses the Mocha terminal palette already loaded by Kitty, including in tmux.
+# default = Text #cdd6f4 on Base #1e1e2e
+# color0 = Surface 1 #45475a; color8 = Surface 2 #585b70
+# color1 = Red #f38ba8; color2 = Green #a6e3a1
+# color3 = Yellow #f9e2af; color4 = Blue #89b4fa
+# color5 = Pink #f5c2e7; color6 = Teal #94e2d5
+# color7 = Subtext 1 #bac2de; color15 = Subtext 0 #a6adc8
 
-set color_directcolor = no
 uncolor *
 
-# Palette: text 189, subtext 146, overlay 103, muted overlay 243.
-# Surfaces: base 235, mantle 234, surface 0/1/2 237/239/241.
-# Accents: green 151, red 211, pink 218, blue 111, mauve 183,
-# lavender 147, teal/sky 116, peach 216.
+# Interface: keep ordinary text quiet and use one restrained selection color.
+color normal            default       default
+color message           default       default
+color indicator         default       color0
+color status            color15       color0
+color tree              color3        default
+color signature         color8        default
+color attachment        color4        default
+color error             color1        default
+color tilde             color8        default
+color search            color0        color3
+color markers           color8        default
 
-# General interface and message selection.
-color normal                      color189  color235
-color message                     color189  color235
-color indicator         bold      color189  color241
-color status            bold      color146  color234
-color tree                        color146  color235
-color tilde                       color243  color235
-color markers                     color103  color235
-color error             bold      color211  color235
-color search            bold      color235  color111
-color attachment                  color218  color235
-color signature                   color146  color235
-color bold              bold      color111  color235
-color underline         underline color111  color235
+# Message states, following the hierarchy in colors.muttrc.
+color index             color1        default  ~F
+color index             color4        default  ~N
+color index             color4        default  ~O
+color index             color3        color0   ~T
+color index             color8        default  ~D
 
-# Message states. Later matching rules override earlier ones.
-color index                       color189  color235 "~A"
-color index                       color151  color235 "~O"
-color index             bold      color151  color235 "~N"
-color index             bold      color211  color235 "~F"
-color index             bold      color218  color237 "~T"
-color index                       color211  color235 "~D"
+# Quoted replies. Ordinary body text keeps its natural formatting.
+color quoted            color6        default
+color quoted1           color4        default
+color quoted2           color2        default
+color quoted3           color5        default
+color quoted4           color7        default
+color quoted5           color6        default
+color quoted6           color4        default
+color quoted7           color2        default
+color quoted8           color5        default
+color quoted9           color7        default
 
-# Message headers.
-color hdrdefault                  color218  color235
-color header            bold      color218  color235 "^From:"
-color header            bold      color218  color235 "^Subject:"
-color header                      color147  color235 "^(To|Cc|Bcc):"
-color header                      color146  color235 "^Date:"
-color header                      color116  color235 "^Reply-To:"
+# Headers: distinct accents, without forcing bold throughout the message.
+color hdrdefault        color6        default
+color header            color5        default  '^date:'
+color header            color4        default  '^(to|cc|bcc):'
+color header            color2        default  '^from:'
+color header            color3        default  '^subject:'
+color header            color7        default  '^user-agent:'
+color header            color6        default  '^reply-to:'
 
-# Nested quotations, including all ten levels used by the existing theme.
-color quoted                      color146  color235
-color quoted1                     color146  color235
-color quoted2                     color103  color235
-color quoted3                     color147  color235
-color quoted4                     color183  color235
-color quoted5                     color218  color235
-color quoted6                     color151  color235
-color quoted7                     color116  color235
-color quoted8                     color116  color235
-color quoted9                     color216  color235
-
-# Inline emphasis, email addresses, and links.
-color body              bold      color111  color235 '(^|[[:space:]])\*[^[:space:]]+\*([[:space:]]|$)'
-color body              underline color111  color235 '(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)'
-color body              italic    color111  color235 '(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)'
-color body                        color151  color235 '[-.+_[:alnum:]]+@[-.[:alnum:]]+\.[[:alpha:]]{2,}'
-color body              underline color151  color235 '(https?|ftp)://[^[:space:]<>"()]+'
-
-# Sidebar: current folder, navigation cursor, and mailbox states.
-color sidebar_background          color189  color234
-color sidebar_ordinary            color146  color234
-color sidebar_spool_file          color189  color234
-color sidebar_divider             color239  color234
-color sidebar_flagged   bold      color211  color234
-color sidebar_unread              color151  color234
-color sidebar_new       bold      color151  color234
-color sidebar_highlight           color189  color239
-color sidebar_indicator bold      color183  color237
+# Sidebar: share the message background instead of painting a second panel.
+color sidebar_background default      default
+color sidebar_ordinary   color7       default
+color sidebar_spool_file default      default
+color sidebar_divider    color8       default
+color sidebar_flagged    color3       default
+color sidebar_unread     color4       default
+color sidebar_new        color4       default
+color sidebar_highlight  default      color0
+color sidebar_indicator  default      color0
 
 # Upstream license: MIT
 # Copyright (c) 2021 Catppuccin
