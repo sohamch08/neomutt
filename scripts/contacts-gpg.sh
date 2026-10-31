@@ -87,7 +87,7 @@ backup() {
     return 1
   fi
 
-  if ! mv -fT -- "$temp" "$file.gpg"; then
+  if ! gmv -fT -- "$temp" "$file.gpg"; then
     echo "ERROR: Encryption succeeded, but '$file.gpg' could not be replaced." >&2
     echo "Check destination-directory permissions, disk space, and whether the filesystem is read-only." >&2
     return 1
@@ -108,7 +108,7 @@ restore() {
     return 1
   fi
 
-  if ! ln -T -- "$temp" "$file"; then
+  if ! gln -T -- "$temp" "$file"; then
     echo "ERROR: Decryption succeeded, but '$file' could not be created." >&2
     echo "Check whether that path appeared while the script was running, or whether its directory is writable." >&2
     echo "The script will not overwrite an existing destination." >&2
