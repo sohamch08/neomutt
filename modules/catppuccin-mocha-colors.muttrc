@@ -1,0 +1,95 @@
+# vim: set filetype=muttrc :
+# Catppuccin Mocha for NeoMutt
+# Based on the Catppuccin NeoMutt light and dark theme mappings:
+# https://github.com/catppuccin/neomutt/blob/main/latte-neomuttrc
+# https://github.com/catppuccin/neomutt/blob/main/neomuttrc
+# Palette: https://catppuccin.com/palette/#mocha
+# Uses 256-color Mocha approximations, like the existing colors.muttrc.
+
+set color_directcolor = no
+uncolor *
+
+# Palette: text 189, subtext 146, overlay 103, muted overlay 243.
+# Surfaces: base 235, mantle 234, surface 0/1/2 237/239/241.
+# Accents: green 151, red 211, pink 218, blue 111, mauve 183,
+# lavender 147, teal/sky 116, peach 216.
+
+# General interface and message selection.
+color normal                      color189  color235
+color message                     color189  color235
+color indicator         bold      color189  color241
+color status            bold      color146  color234
+color tree                        color146  color235
+color tilde                       color243  color235
+color markers                     color103  color235
+color error             bold      color211  color235
+color search            bold      color235  color111
+color attachment                  color218  color235
+color signature                   color146  color235
+color bold              bold      color111  color235
+color underline         underline color111  color235
+
+# Message states. Later matching rules override earlier ones.
+color index                       color189  color235 "~A"
+color index                       color151  color235 "~O"
+color index             bold      color151  color235 "~N"
+color index             bold      color211  color235 "~F"
+color index             bold      color218  color237 "~T"
+color index                       color211  color235 "~D"
+
+# Message headers.
+color hdrdefault                  color218  color235
+color header            bold      color218  color235 "^From:"
+color header            bold      color218  color235 "^Subject:"
+color header                      color147  color235 "^(To|Cc|Bcc):"
+color header                      color146  color235 "^Date:"
+color header                      color116  color235 "^Reply-To:"
+
+# Nested quotations, including all ten levels used by the existing theme.
+color quoted                      color146  color235
+color quoted1                     color146  color235
+color quoted2                     color103  color235
+color quoted3                     color147  color235
+color quoted4                     color183  color235
+color quoted5                     color218  color235
+color quoted6                     color151  color235
+color quoted7                     color116  color235
+color quoted8                     color116  color235
+color quoted9                     color216  color235
+
+# Inline emphasis, email addresses, and links.
+color body              bold      color111  color235 '(^|[[:space:]])\*[^[:space:]]+\*([[:space:]]|$)'
+color body              underline color111  color235 '(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)'
+color body              italic    color111  color235 '(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)'
+color body                        color151  color235 '[-.+_[:alnum:]]+@[-.[:alnum:]]+\.[[:alpha:]]{2,}'
+color body              underline color151  color235 '(https?|ftp)://[^[:space:]<>"()]+'
+
+# Sidebar: current folder, navigation cursor, and mailbox states.
+color sidebar_background          color189  color234
+color sidebar_ordinary            color146  color234
+color sidebar_spool_file          color189  color234
+color sidebar_divider             color239  color234
+color sidebar_flagged   bold      color211  color234
+color sidebar_unread              color151  color234
+color sidebar_new       bold      color151  color234
+color sidebar_highlight           color189  color239
+color sidebar_indicator bold      color183  color237
+
+# Upstream license: MIT
+# Copyright (c) 2021 Catppuccin
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
