@@ -15,9 +15,9 @@ application/postscript; zathura %s; nametemplate=%s.ps
 # All other image types: use desktop associations
 image/*; open %s; x-neomutt-keep
 
-# HTML: browser on demand, Lynx for terminal rendering
+# HTML: browser on demand, clean UTF-8 text in the pager
 text/html; open %s; nametemplate=%s.html; x-neomutt-keep
-text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
+text/html; /usr/bin/python3 ~/.config/neomutt/scripts/render-html.py %s; nametemplate=%s.html; copiousoutput
 
 # Microsoft Office documents
 application/msword; libreoffice --view %s; nametemplate=%s.doc; x-neomutt-keep
