@@ -3,7 +3,7 @@
 set to_chars                        = " 󰆎"
 set flag_chars                      = "ONon  "
 tag-transforms "replied" "↻ "  \
-               "encrytpted" "" \
+               "encrypted" "" \
                "signed" "" \
                "attachment" "" \
 
@@ -13,4 +13,4 @@ set status_format                   = "───[ Folder: %f ]───[%r%m mes
 # set status_format                   = "-%r-NeoMutt: %D [Msgs:%<M?%M/>%m%<n? New:%n>%<o? Old:%o> %<d? Del:%d>%<F? Flag:%F> %<t? Tag:%t>%<p? Post:%p>%<b? Inc:%b> %<l? %l>]---(%<T?%T/>%s/%S)-%>-(%P)---"
 
 # Index Bar Mail Entries
-set index_format                    = "%zc %zs %zt  | %-35.35L   %?M? (%M) ?%-30.100s %> %?Y?%Y ? %(!%a %d %h %H:%M)  "
+set index_format                    = "%zc %zs %zt  %-24.24L  %?M? (%M) ?%s%>  %(%d %b %H:%M)"
