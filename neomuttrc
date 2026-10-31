@@ -2,7 +2,7 @@
 source ~/.config/neomutt/modules/binds.muttrc
 source ~/.config/neomutt/modules/decorations.muttrc
 # source ~/.config/neomutt/modules/colors.muttrc
-source ~/.config/neomutt/modules/catppuccin-mocha-colors.muttrc
+source ~/.config/neomutt/themes/TokyoNight_Night.muttrc
 source ~/.config/neomutt/modules/aliases.muttrc
 
 # Identity
