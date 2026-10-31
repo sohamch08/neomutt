@@ -13,73 +13,75 @@
 # Global Defaults
 ########################################
 
-color normal color238 color15
-color error color131 color15
-color message color61 color15
-color indicator color15 color167
-color tree color237 color15
+set color_directcolor = yes
+
+color normal "#414141" "#ffffff"
+color error "#b23771" "#ffffff"
+color message "#3c5ea8" "#ffffff"
+color indicator "#ffffff" "#cd6f34"
+color tree "#3f3f3f" "#ffffff"
 
 ########################################
 # Status Bar
 ########################################
 
-color status color238 color237
+color status "#414141" "#3f3f3f"
 
 ########################################
 # Index View
 ########################################
 
-color index color238 color15
-color index_number color237 color15
-color index_author color61 color15
-color index_subject color238 color15
-color index_date color167 color15
-color index_flags color167 color15
+color index "#414141" "#ffffff"
+color index_number "#3f3f3f" "#ffffff"
+color index_author "#3c5ea8" "#ffffff"
+color index_subject "#414141" "#ffffff"
+color index_date "#cd6f34" "#ffffff"
+color index_flags "#db3365" "#ffffff"
 
-color index color131 color15 "~D"
-color index color167 color15 "~T"
+color index "#b23771" "#ffffff" "~D"
+color index "#cd6f34" "#ffffff" "~T"
 
 ########################################
 # Headers
 ########################################
 
-color hdrdefault color238 color15
-color header color61 color15 "^From:"
-color header color61 color15 "^To:"
-color header color167 color15 "^Subject:"
-color header color167 color15 "^Date:"
-color header color100 color15 "^Reply-To:"
-color header color100 color15 "^Message-ID:"
+color hdrdefault "#414141" "#ffffff"
+color header "#3c5ea8" "#ffffff" "^From:"
+color header "#3c5ea8" "#ffffff" "^To:"
+color header "#cd6f34" "#ffffff" "^Subject:"
+color header "#cd6f34" "#ffffff" "^Date:"
+color header "#829429" "#ffffff" "^Reply-To:"
+color header "#829429" "#ffffff" "^Message-ID:"
 
 ########################################
 # Body
 ########################################
 
-color body color238 color15 ".*"
-color quoted0 color100 color15
-color quoted1 color100 color15
-color signature color237 color15
-color body color61 color15 "(https?|ftp)://[^ ]+"
+color body "#414141" "#ffffff" ".*"
+color quoted0 "#829429" "#ffffff"
+color quoted1 "#829429" "#ffffff"
+color signature "#3f3f3f" "#ffffff"
+color body "#3c5ea8" "#ffffff" "(https?|ftp)://[^ ]+"
 
 ########################################
 # Search
 ########################################
 
-color search color15 color167
+color search "#ffffff" "#cd6f34"
 
 ########################################
 # Compose
 ########################################
 
-color compose_header color61 color15
-color compose_security_encrypt color167 color15
-color compose_security_sign color100 color15
-color compose_security_both color100 color15
+color compose_header "#3c5ea8" "#ffffff"
+color compose_security_encrypt "#db3365" "#ffffff"
+color compose_security_sign "#829429" "#ffffff"
+color compose_security_both "#829429" "#ffffff"
 
 ########################################
 # Diff / Patch
 ########################################
 
-color body color15 color100 "^\\+.*"
-color body color15 color131 "^-.*"
-color body color15 color167 "^@@.*"
+color body "#ffffff" "#829429" "^\\+.*"
+color body "#ffffff" "#b23771" "^-.*"
+color body "#ffffff" "#cd6f34" "^@@.*"
