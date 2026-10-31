@@ -5,13 +5,14 @@ Port 993
 User soham.chatterjee@tifr.res.in
 PassCmd "pass tifr"
 TLSType IMAPS
+AuthMechs LOGIN
 SystemCertificates yes
 
 # Local Maildir store
 MaildirStore soham.chatterjee@tifr.res.in-local
 Subfolders Verbatim
-Path /home/soham/.mail/tifr/
-Inbox /home/soham/.mail/tifr/INBOX
+Path /Users/soham/.mail/tifr/
+Inbox /Users/soham/.mail/tifr/INBOX
 
 # Sync channel
 Channel soham.chatterjee@tifr.res.in

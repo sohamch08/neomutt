@@ -2,7 +2,7 @@
 source ~/.config/neomutt/modules/binds.muttrc
 source ~/.config/neomutt/modules/decorations.muttrc
 source ~/.config/neomutt/modules/colors.muttrc
-source ~/.config/neomutt/modules/aliases.muttrc
+# source ~/.config/neomutt/modules/aliases.muttrc
 
 # Identity
 set from                            = "soham.chatterjee@tifr.res.in"
@@ -77,7 +77,7 @@ hdr_order from: to: cc: date: subject:  # and in this order
 
 # Notmuch config
 set nm_config_file                  = "~/.config/neomutt/notmuch-config"
-set nm_default_url                  = "notmuch:///home/soham/.mail/tifr"
+set nm_default_url                  = "notmuch:///Users/soham/.mail/tifr"
 
 
 # Some More Config
@@ -122,3 +122,6 @@ set markers                         = no
 
 # Address Book setup (Abook)
 set query_command                   = "abook --mutt-query %s"
+
+auto_view text/html
+alternative_order text/plain text/html
