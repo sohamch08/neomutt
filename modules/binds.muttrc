@@ -1,5 +1,3 @@
-# vim: set filetype=muttrc :
-
 # Vim Bindings
 bind index j next-entry
 bind index k previous-entry
