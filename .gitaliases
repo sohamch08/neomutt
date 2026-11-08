@@ -1,0 +1,4 @@
+[alias]
+	contact-bak = "!f() (\n    cd \"$(git rev-parse --show-toplevel)\" || exit\n    ./scripts/contacts-gpg.sh backup &&\n    git -c core.hooksPath=/dev/null commit --only \\\n        -m \"updated database\" \\\n        -- modules/aliases.muttrc.gpg abook/addressbook.gpg &&\n    git push\n); f"
+	cpost = commit --no-verify
+	cnobak = -c core.hooksPath=/dev/null commit
