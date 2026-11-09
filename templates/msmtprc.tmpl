@@ -14,7 +14,7 @@ tls_host_override   tifr.res.in
 tls_starttls   on
 from           $TIFR_USER_NAME@tifr.res.in
 user           $TIFR_USER_NAME@tifr.res.in
-passwordeval   "pass tifr"
+passwordeval   "gopass show -o mail/TIFR pass"
 
 # Default account
 account default : $TIFR_USER_NAME@tifr.res.in

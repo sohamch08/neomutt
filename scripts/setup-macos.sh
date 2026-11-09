@@ -10,7 +10,7 @@ service="gui/$(id -u)/local.neomutt.mailsync"
 test "$(uname -s)" = Darwin
 test -f "$config/scripts/mailsync.sh"
 
-for program in python3 mbsync notmuch pass gpg; do
+for program in python3 mbsync notmuch gopass gpg; do
   command -v "$program" >/dev/null
 done
 

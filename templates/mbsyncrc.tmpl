@@ -3,7 +3,7 @@ IMAPStore $TIFR_USER_NAME@tifr.res.in-remote
 Host tifr.res.in
 Port 993
 User $TIFR_USER_NAME@tifr.res.in
-PassCmd "pass tifr"
+PassCmd "gopass show -o mail/TIFR pass"
 TLSType IMAPS
 AuthMechs LOGIN
 SystemCertificates yes
