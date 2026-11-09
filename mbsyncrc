@@ -3,7 +3,7 @@ IMAPStore soham.chatterjee@tifr.res.in-remote
 Host tifr.res.in
 Port 993
 User soham.chatterjee@tifr.res.in
-PassCmd "/opt/homebrew/bin/gopass show -o mail/TIFR pass"
+PassCmd "/opt/homebrew/bin/gopass show -o mail/TIFR"
 TLSType IMAPS
 AuthMechs LOGIN
 SystemCertificates yes
