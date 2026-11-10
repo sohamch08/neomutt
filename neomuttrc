@@ -39,15 +39,15 @@ set editor                          = "nvim -f"
 set sendmail                        = "msmtp -a soham.chatterjee@tifr.res.in"
 
 # Basic behaviour
-set wait_key                        = no 
+set wait_key                        = no
 set timeout                         = 3
 set mail_check                      = 0
 unset confirmappend
 set pipe_decode
-set thorough_search      
+set thorough_search
 set quit
 set sort_re
-set use_threads                     = yes
+set use_threads                     = threads
 set sort                            = reverse-last-date-received
 set sort_aux                        = date-received
 set mark_old                        = no
