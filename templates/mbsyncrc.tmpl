@@ -18,6 +18,7 @@ Channel $TIFR_USER_NAME@tifr.res.in
 Expunge Both
 Far :$TIFR_USER_NAME@tifr.res.in-remote:
 Near :$TIFR_USER_NAME@tifr.res.in-local:
-Patterns *
+# Keep the retired +ACT_Global mailbox locally; only ACT_Global exists remotely.
+Patterns * !+ACT_Global
 Create Both
 SyncState *

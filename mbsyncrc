@@ -18,6 +18,7 @@ Channel soham.chatterjee@tifr.res.in
 Expunge Both
 Far :soham.chatterjee@tifr.res.in-remote:
 Near :soham.chatterjee@tifr.res.in-local:
-Patterns *
+# Keep the retired +ACT_Global mailbox locally; only ACT_Global exists remotely.
+Patterns * !+ACT_Global
 Create Both
 SyncState *
